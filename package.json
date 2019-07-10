@@ -1,7 +1,11 @@
 {
-"name": "UI III",
-"version": "1.0.0",
+  "name": "Project3",
+  "version": "1.0.0",
   "scripts": {
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory",
     "test": "exit 1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7"
   }
 }
