@@ -100,15 +100,21 @@ section {
 }
 
 header {
-	position: fixed;
-	display: flex;
-	justify-content: space-between;
-	z-index: 1;
-	width: 876px;
-	top: 0px;
 	background-color: blue;
 	padding-top: 30px;
 	padding-bottom: 35px;
+	box-shadow: 3px 1px 3px 3px #bbb;
+}
+
+.fixed-top {
+  display: flex;
+  position: fixed;
+	flex-direction: row;
+	justify-content: space-between;
+	z-index: 1;
+  top: 0;
+	left: 0;
+	right: 0px;
 }
 
 nav{
@@ -141,7 +147,9 @@ address{
 }
 
 .container{
-	width: 876px;
+	display: flex;
+	flex-direction: column;
+	max-width: 876px;
 	margin: 0 auto;
 }
 
@@ -198,7 +206,19 @@ ul.list-circles li{
 }
 
 .jumbotron2{
-	margin-top: 92px;
+	margin-top: 100px;
+}
+
+.jumbotron2 img{
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.border-bottom{
+	border-bottom: 1px solid black;
+	margin-bottom: 0px;
+	padding-bottom: 30px;
 }
 
 .ff-r-w{
@@ -207,12 +227,19 @@ ul.list-circles li{
 	align-items: space-between;
 }
 
+.f-row{
+	flex-direction: row;
+}
+
 .service-block{
-	background-color: lightgrey;
-	border: 1px solid black;
+	background-color: #ffffff;
+	border: 1px solid #fff;
+	box-shadow: 0px 0px 15px 2px #dddddd;
+	border-radius: 20px;
 	margin-bottom: 30px;
 	padding: 20px;
 	width: 43%;
+	transition: width 0.2s;
 }
 
 .pushUpDown{
@@ -279,6 +306,42 @@ footer.cta{
 
 .contact-info{
 	margin-bottom: 30px;
+}
+
+.services-info-img{
+		object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+	.service-block{
+		text-align: center;
+		width: 100%;
+		background-color: #ffffff;
+		border: 1px solid #fff;
+		box-shadow: 0px 0px 15px 2px #dddddd;
+		border-radius: 20px;
+		margin-bottom: 30px;
+		padding: 20px;
+	}
+
+	.container{
+		padding: 0px 10px 0px 10px;
+	}
+
+	header nav{
+		display: none;
+	}
+
+	.fixed-top{
+		justify-content: center;
+		align-items: center;
+	}
+
+	.f-row{
+		flex-direction: column;
+		text-align: center;
+	}
+
 }
 
 /* ----------------------------------------------
